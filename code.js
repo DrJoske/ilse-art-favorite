@@ -27,7 +27,7 @@ function parseResponse(data) {
    // const source = ["INSTAGRAM", "TWITTER"];
     const source = ["INSTAGRAM"];
     const filteredData = data.filter(function (art) {
-        return source.includes(art.description.toUpperCase());
+        return art.description != null && source.includes(art.description.toUpperCase());
     });
     return filteredData[Math.floor(Math.random() * filteredData.length)];
 }
