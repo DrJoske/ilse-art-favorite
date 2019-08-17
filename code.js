@@ -14,8 +14,8 @@ async function fetchAsyncArt() {
 }
 
 function renderResponse(artPiece) {
-    console.log(artPiece)
-    if (artPiece.description.toUpperCase() === "INSTAGRAM") {
+    console.log(artPiece);
+    if ("INSTAGRAM" === artPiece.description.toUpperCase()) {
         fetchAsyncInstagram('https://api.instagram.com/oembed/?url=' + artPiece.url + "/&amp;omitscript=true")
             .then(data => document.getElementById('art').innerHTML = data["html"])
             .then(() => loadEmbed())
