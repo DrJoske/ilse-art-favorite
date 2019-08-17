@@ -23,7 +23,8 @@ function renderResponse(artPiece) {
 }
 
 function parseResponse(data) {
-    const source = ["INSTAGRAM", "TWITTER"];
+   // const source = ["INSTAGRAM", "TWITTER"];
+    const source = ["INSTAGRAM"];
     const filteredData = data.filter(function (art) {
         return source.includes(art.description.toUpperCase());
     });
